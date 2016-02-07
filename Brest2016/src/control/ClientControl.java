@@ -70,15 +70,15 @@ public class ClientControl {
 	@RequestMapping(value="/inscription",method=RequestMethod.POST)
 	public @ResponseBody Resultat inscription(
 			@RequestBody @Valid Visiteur visiteur, BindingResult bres) {
-		System.out.println("inscription nom = "+visiteur.getNom_Visteur());
+		System.out.println("inscription nom = "+visiteur.getVisit_nom());
 		Resultat res = convertBindingResult(bres);
 	
 		Visiteur v = new Visiteur();
 		
-		v.setNom_Visteur(visiteur.getNom_Visteur());
-		v.setPrenom_Visiteur(visiteur.getPrenom_Visiteur());
-		v.setEmail_Visiteur(visiteur.getEmail_Visiteur());
-		v.setDateNaissance_Visiteur(visiteur.getDateNaissance_Visiteur());
+		v.setVisit_nom(visiteur.getVisit_prenom());
+		v.setVisit_prenom(visiteur.getVisit_prenom());
+		v.setVisit_email(visiteur.getVisit_email());
+		v.setVisit_date_naissance(visiteur.getVisit_date_naissance());
 		//SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
        
 		/*try {
@@ -93,8 +93,10 @@ public class ClientControl {
 		//Random r = new Random();
 		//int valeur = 5 + r.nextInt(300 - 5);
        Billet b = new Billet();
+       b.setCode_Billet("Abdou4445");
+       b.setVisiteur(v);
         //b.setCode_Billet(v.getNom_Visteur().charAt(0)+ v.getPrenom_Visiteur()+valeur);
-	   v.addBillet(b);
+	   //v.addBillet(b);
 		if(res.getRes().equals("SUCCESS")) {
 			dao.inscription(v);
 		}
@@ -110,6 +112,13 @@ public class ClientControl {
 		System.out.println("listerClients");
 
 		return dao.listerClients();
+	}
+	
+	@RequestMapping(value="/listerVisiteurs",method=RequestMethod.GET)
+	public @ResponseBody List <Visiteur> listerVisteur() {
+		System.out.println("listerVisiteurs");
+
+		return dao.listerVisiteurs();
 	}
 
 	public Resultat convertBindingResult(BindingResult bres) {

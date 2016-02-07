@@ -36,23 +36,23 @@ public class Visiteur {
 	private Integer visiteur_id;
 	
 	@Column(name="visit_nom")
-	private String nom_visteur;
+	private String visit_nom;
 	
 
 	@Column(name="visit_prenom")
-	private String prenom_visiteur;
+	private String visit_prenom;
 	
 	@Column(name="visit_email")
-	private String email_visiteur;
+	private String visit_email;
 	
 	@Column(name="visit_date_naissance")
-	private String dateNaissance_visiteur;
+	private String visit_date_naissance;
 	
 
 	
 	@OneToMany(mappedBy="visiteur")
-	@Cascade({CascadeType.ALL})
-	public Set<Billet> billets = new HashSet<Billet>();
+	//@Cascade({CascadeType.ALL})
+	public Set<Billet> billets ;//= new HashSet<Billet>();
 	
 
 
@@ -83,6 +83,67 @@ public class Visiteur {
 	 }
 	
 
+
+	public Integer getVisiteur_id() {
+		return visiteur_id;
+	}
+
+
+
+	public void setVisiteur_id(Integer visiteur_id) {
+		this.visiteur_id = visiteur_id;
+	}
+
+
+
+	public String getVisit_nom() {
+		return visit_nom;
+	}
+
+
+
+	public void setVisit_nom(String visit_nom) {
+		this.visit_nom = visit_nom;
+	}
+
+
+
+	public String getVisit_prenom() {
+		return visit_prenom;
+	}
+
+
+
+	public void setVisit_prenom(String visit_prenom) {
+		this.visit_prenom = visit_prenom;
+	}
+
+
+
+	public String getVisit_email() {
+		return visit_email;
+	}
+
+
+
+	public void setVisit_email(String visit_email) {
+		this.visit_email = visit_email;
+	}
+
+
+
+	public String getVisit_date_naissance() {
+		return visit_date_naissance;
+	}
+
+
+
+	public void setVisit_date_naissance(String visit_date_naissance) {
+		this.visit_date_naissance = visit_date_naissance;
+	}
+
+
+
 	public Set<Billet> getBillets() {
 		return billets;
 	}
@@ -93,66 +154,6 @@ public class Visiteur {
 		this.billets = billets;
 	}
 
-
-	
-	
-	public Integer getID_Visiteur() {
-		return visiteur_id;
-	}
-
-
-
-	public void setID_Visiteur(Integer iD_Visiteur) {
-		visiteur_id = iD_Visiteur;
-	}
-
-
-
-	public String getNom_Visteur() {
-		return nom_visteur;
-	}
-
-
-
-	public void setNom_Visteur(String nom_Visteur) {
-		nom_visteur = nom_Visteur;
-	}
-
-
-
-	public String getPrenom_Visiteur() {
-		return prenom_visiteur;
-	}
-
-
-
-	public void setPrenom_Visiteur(String prenom_Visiteur) {
-		prenom_visiteur = prenom_Visiteur;
-	}
-
-
-
-	public String getEmail_Visiteur() {
-		return email_visiteur;
-	}
-
-
-
-	public void setEmail_Visiteur(String email_Visiteur) {
-		email_visiteur = email_Visiteur;
-	}
-
-
-
-	public String getDateNaissance_Visiteur() {
-		return dateNaissance_visiteur;
-	}
-
-
-
-	public void setDateNaissance_Visiteur(String dateNaissance_Visiteur) {
-		dateNaissance_visiteur = dateNaissance_Visiteur;
-	}
 
 
 	public void addBillet(Billet billet)

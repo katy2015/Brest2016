@@ -25,7 +25,7 @@ public class Billet {
 	private String code_billet;
 	
 	@ManyToOne
-	@JoinColumn(name = "visiteur_id")
+	@JoinColumn(name="visiteur_id")
 	private Visiteur visiteur;
 	
 	public Billet()

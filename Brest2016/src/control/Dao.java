@@ -50,6 +50,12 @@ public class Dao {
 		return lst;
 	}
 	
+	public List<Visiteur>listerVisiteurs()  {
+		List <Visiteur> lst = em.createQuery(
+				"select g from visiteur g").getResultList();
+		return lst;
+	}
+	
 	public void init() {
 		System.out.println("init dao");
 	}

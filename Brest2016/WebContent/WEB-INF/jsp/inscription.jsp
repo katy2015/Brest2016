@@ -21,26 +21,26 @@ controller('ClientControl', ['$scope', '$http', function ($scope, $http) {
 	          data:  $scope.visiteur
 	        }).success(function (data) 
 	          {
-	        	//alert("nb clients "+data.length);
+	        	alert("nb visiteurs "+data.length);
 	        	$scope.erreurs = data;
 	        	if (data.res == "SUCCESS") {
 	     			//alert("success");
-	     			$scope.mess = "Visiteur " + $scope.visiteur.nom_visiteur + " enregistré";
-	     			$scope.visiteur.nom_Visiteur = "";
-	     			$scope.visiteur.prenom_Visiteur = "";
-	     			$scope.visiteur.email_Visiteur = "";
-	     			$scope.visiteur.dateNaissance_Visiteur = "";
-	     			//$scope.visiteur.code_Billet = "";
-	     			//$scope.client.prenom_Visiteur = "";
-	     		//$http({
-	    	      //    method: 'GET',
-	    	        //  url: 'listerClients.htm',
-	    	          //headers: {'Content-Type': 'application/json'},
-	    	     	//}).success(function (data) 
-	    	        //{
-	    	        	//alert("nb clients "+data.length);
-	    	        	//$scope.listeClients = data;
-	    	      	//});
+	     			$scope.mess = "Visiteur " + $scope.visiteur.visit_nom + " enregistré";
+	     			$scope.visiteur.visit_nom = "";
+	     			$scope.visiteur.visit_prenom = "";
+	     			$scope.visiteur.visit_email = "";
+	     			$scope.visiteur.visit_date_naissance = "";
+	     			$http({
+		    	          method: 'GET',
+		    	          url: 'listerVisiteurs.htm',
+		    	          headers: {'Content-Type': 'application/json'},
+		    	     	}).success(function (data) 
+		    	        {
+		    	        	//alert("nb clients "+data.length);
+		    	        	$scope.listeVisteurs = data;
+		    	      	});
+
+		        	
 
 	        	}
 	          });
@@ -59,7 +59,7 @@ controller('ClientControl', ['$scope', '$http', function ($scope, $http) {
 <body>
 <h1>Enregistrement d'un client</h1>
 
-Test <input ng-model="nom_visiteur" type="text"/> {{nom_Visiteur}} !
+Test <input ng-model="visit_nom" type="text"/> {{visit_nom}} !
 
 <br />
 <br />
@@ -72,56 +72,56 @@ $dirty	True if user has already interacted with the form.
 	<table>
 		<tr>
 			<td>Nom : </td>
-			<td><input id="nom_visteur" name="nom_visteur" type="text" value="aaa" 
-					ng-model="visiteur.nom_visteur" 
+			<td><input id="visit_nom" name="visit_nom" type="text" value="adfdfaa" 
+					ng-model="visiteur.visit_nom" 
 					ng-model-options="{ updateOn: 'blur' }"
 			 		ng-required="true" 
 			 		ng-pattern="/^[a-zA-Z]{2,}$/" /></td>
 		 	<td>
-		 		<div ng-show="form.nom_visteur.$dirty">
-		 		   	<div ng-show="form.nom_visteur.$error.required">Veuillez saisir un nom</div>
+		 		<div ng-show="form.visit_nom.$dirty">
+		 		   	<div ng-show="form.visit_nom.$error.required">Veuillez saisir un nom</div>
 			    </div>
 		 		
       			
-      			<div ng-show="form.nom_visteur.$error.pattern">Veuillez saisir au moins deux caractères</div>
+      			<div ng-show="form.visit_nom.$error.pattern">Veuillez saisir au moins deux caractères</div>
      		</td>
     	</tr>
 		<tr>
 			<td>Prénom : </td>
-			<td> <input id="prenom_visiteur" name="prenom_visiteur" value="zzz" 
-					ng-model="visiteur.prenom_visiteur" 
+			<td> <input id="visit_prenom" name="visit_prenom" value="zzssdz" 
+					ng-model="visiteur.visit_prenom" 
 					ng-model-options="{ updateOn: 'blur' }"
 					required type="text" />
 			</td>
 			<td>
-				<div ng-show="form.prenom_visiteur.$dirty">
-      				<div ng-show="form.prenom_visiteur.$error.required">Veuillez saisir un prénom</div>
+				<div ng-show="form.visit_prenom.$dirty">
+      				<div ng-show="form.visit_prenom.$error.required">Veuillez saisir un prénom</div>
       			</div>
 			</td>
 		</tr>
 		<tr>
 			<td>Email : </td>
-			<td> <input id="email_visiteur" name="email_visiteur" value="zzz@gmail.com" 
-					ng-model="visiteur.email_visiteur" 
+			<td> <input id="visit_email" name="visit_email" value="zzz@gmail.com" 
+					ng-model="visiteur.visit_email" 
 					ng-model-options="{ updateOn: 'blur' }"
 					required type="text" />
 			</td>
 			<td>
-				<div ng-show="form.email_visiteur.$dirty">
-      				<div ng-show="form.email_visiteur.$error.required">Veuillez saisir votre email</div>
+				<div ng-show="form.visit_email.$dirty">
+      				<div ng-show="form.visit_email.$error.required">Veuillez saisir votre email</div>
       			</div>
 			</td>
 		</tr>
 		<tr>
 			<td>Date de naissance : </td>
-			<td> <input id="dateNaissance_visiteur" name="dateNaissance_visiteur" value="20050201" 
-					ng-model="visiteur.dateNaissance_visiteur" 
+			<td> <input id="visit_date_naissance" name="visit_date_naissance" value="20050201" 
+					ng-model="visiteur.visit_date_naissance" 
 					ng-model-options="{ updateOn: 'blur' }"
 					required type="text" />
 			</td>
 			<td>
-				<div ng-show="form.dateNaissance_visiteur.$dirty">
-      				<div ng-show="form.dateNaissance_visiteur.$error.required">Veuillez votre date de naissance</div>
+				<div ng-show="form.visit_date_naissance.$dirty">
+      				<div ng-show="form.visit_date_naissance.$error.required">Veuillez votre date de naissance</div>
       			</div>
 			</td>
 		</tr>
@@ -138,10 +138,10 @@ $dirty	True if user has already interacted with the form.
 Erreurs signalées par le serveur (la validation côté client et côté serveur sont différentes pour montrer le fonctionnement):
 
 <ul>
-<li ng-show="erreurs.err['nom_visiteur']">{{erreurs.err['nom_visiteur']}}</li>
-<li ng-show="erreurs.err['prenom_visiteur']">{{erreurs.err['prenom_visiteur']}}</li>
-<li ng-show="erreurs.err['email_visiteur']">{{erreurs.err['email_visiteur']}}</li>
-<li ng-show="erreurs.err['dateNaissance_visiteur']">{{erreurs.err['dateNaissance_visiteur']}}</li>
+<li ng-show="erreurs.err['visit_nom']">{{erreurs.err['visit_nom']}}</li>
+<li ng-show="erreurs.err['visit_prenom']">{{erreurs.err['visit_prenom']}}</li>
+<li ng-show="erreurs.err['visit_email']">{{erreurs.err['visit_email']}}</li>
+<li ng-show="erreurs.err['visit_date_naissance']">{{erreurs.err['visit_date_naissance']}}</li>
 
 
 </ul>
@@ -160,7 +160,9 @@ Succès
 
 <p>Liste des visiteurs :</p>
 
-
+<ul>
+	<li ng-repeat="x in listeVisteurs">{{x.visit_nom}} {{x.visit_prenom}}</li>
+</ul>
 </form>
 
 
