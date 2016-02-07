@@ -21,7 +21,7 @@ controller('ClientControl', ['$scope', '$http', function ($scope, $http) {
 	          data:  $scope.visiteur
 	        }).success(function (data) 
 	          {
-	        	alert("nb visiteurs "+data.length);
+	        	//alert("nb visiteurs "+data.length);
 	        	$scope.erreurs = data;
 	        	if (data.res == "SUCCESS") {
 	     			//alert("success");

@@ -52,7 +52,7 @@ public class Dao {
 	
 	public List<Visiteur>listerVisiteurs()  {
 		List <Visiteur> lst = em.createQuery(
-				"select g from visiteur g").getResultList();
+				"select g from Visiteur g").getResultList();
 		return lst;
 	}
 	
