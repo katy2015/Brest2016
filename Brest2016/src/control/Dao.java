@@ -38,9 +38,9 @@ public class Dao {
 	public void inscription(Visiteur v)
 	{
 		EntityTransaction tx = em.getTransaction();
-		//tx.begin();
-		//em.persist(v);
-		//tx.commit();
+		tx.begin();
+		em.persist(v);
+		tx.commit();
 	}
 	
 	

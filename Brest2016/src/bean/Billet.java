@@ -68,7 +68,7 @@ public class Billet {
 
 
 	public void setCode_Billet(String code_Billet) {
-		code_Billet = code_Billet;
+		this.code_billet = code_Billet;
 	}
 	
 	

@@ -15,11 +15,11 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="ANIMATION")
+//@Entity
+//@Table(name="ANIMATION")
 public class Animation {
 
-	@Id
+	/*@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID_Animation")
 	private Integer ID_Animation;
@@ -113,7 +113,7 @@ public class Animation {
 	public void setID_OptAnimation(Integer iD_OptAnimation) {
 		ID_OptAnimation = iD_OptAnimation;
 	}
-
+*/
 
 
 

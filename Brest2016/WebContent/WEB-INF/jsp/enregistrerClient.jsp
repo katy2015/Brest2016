@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <title>Enregistrement d'un client</title>
-<script type="text/javascript" src="angular/angular1.3.14.min.js"></script>
+<script type="text/javascript" src="angular/angular1.4.8.min.js"></script>
 
 <script type="text/javascript">
 

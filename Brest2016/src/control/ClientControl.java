@@ -1,5 +1,8 @@
 package control;
 
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import bean.Billet;
 import bean.Client;
 import bean.Visiteur;
 
@@ -64,7 +68,7 @@ public class ClientControl {
 	}
 	
 	@RequestMapping(value="/inscription",method=RequestMethod.POST)
-	public @ResponseBody Resultat inscrireVisiteur(
+	public @ResponseBody Resultat inscription(
 			@RequestBody @Valid Visiteur visiteur, BindingResult bres) {
 		System.out.println("inscription nom = "+visiteur.getNom_Visteur());
 		Resultat res = convertBindingResult(bres);
@@ -75,12 +79,22 @@ public class ClientControl {
 		v.setPrenom_Visiteur(visiteur.getPrenom_Visiteur());
 		v.setEmail_Visiteur(visiteur.getEmail_Visiteur());
 		v.setDateNaissance_Visiteur(visiteur.getDateNaissance_Visiteur());
+		//SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+       
+		/*try {
+			parsed = (Date) sdf.parse(visiteur.getDateNaissance_Visiteur().toString());
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+        //java.sql.Date sql = new java.sql.Date(parsed.getTime());
+		
 		
 		//Random r = new Random();
 		//int valeur = 5 + r.nextInt(300 - 5);
-        //Billet b = new Billet();
+       Billet b = new Billet();
         //b.setCode_Billet(v.getNom_Visteur().charAt(0)+ v.getPrenom_Visiteur()+valeur);
-	   // v.addBillet(b);
+	   v.addBillet(b);
 		if(res.getRes().equals("SUCCESS")) {
 			dao.inscription(v);
 		}

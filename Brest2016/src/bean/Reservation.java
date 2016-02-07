@@ -15,11 +15,11 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="RESERVATION")
+//@Entity
+//@Table(name="RESERVATION")
 public class Reservation {
 
-	@Id
+	/*@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="reservation_id")
 	private Integer ID_Reservation;
@@ -114,7 +114,7 @@ public class Reservation {
 	}
 
 
-
+*/
 	
 
 }
