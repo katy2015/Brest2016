@@ -26,7 +26,7 @@ public class Billet {
 	
 	@ManyToOne
 	@JoinColumn(name="visiteur_id")
-	private Visiteur visiteur;
+	public Visiteur visiteur;
 	
 	public Billet()
 	{

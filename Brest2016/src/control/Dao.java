@@ -9,6 +9,7 @@ import javax.persistence.Persistence;
 
 import org.springframework.stereotype.Service;
 
+import bean.Billet;
 import bean.Client;
 import bean.Visiteur;
 
@@ -35,11 +36,13 @@ public class Dao {
 		tx.commit();
 	}
 	
-	public void inscription(Visiteur v)
+	public void inscription(Visiteur v, Billet b)
 	{
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		em.persist(v);
+		em.persist(b);
+		em.merge(v);
 		tx.commit();
 	}
 	

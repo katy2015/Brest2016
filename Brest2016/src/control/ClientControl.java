@@ -98,7 +98,7 @@ public class ClientControl {
         //b.setCode_Billet(v.getNom_Visteur().charAt(0)+ v.getPrenom_Visiteur()+valeur);
 	   //v.addBillet(b);
 		if(res.getRes().equals("SUCCESS")) {
-			dao.inscription(v);
+			dao.inscription(v,b);
 		}
 		
 		

@@ -32,7 +32,7 @@ public class Visiteur {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="visiteur_id")
+	@Column(name="VISITEUR_ID")
 	private Integer visiteur_id;
 	
 	@Column(name="visit_nom")
@@ -51,7 +51,7 @@ public class Visiteur {
 
 	
 	@OneToMany(mappedBy="visiteur")
-	//@Cascade({CascadeType.ALL})
+	@Cascade({CascadeType.ALL})
 	public Set<Billet> billets ;//= new HashSet<Billet>();
 	
 
