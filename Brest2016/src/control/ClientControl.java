@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import bean.Billet;
 import bean.Client;
+import bean.Reservation;
 import bean.Visiteur;
 
 @Controller
@@ -38,6 +39,11 @@ public class ClientControl {
 	@RequestMapping(value="/inscription",method=RequestMethod.GET)
 	public String showForm(){
 		return "inscription";
+	}
+	
+	@RequestMapping(value="/reservation",method=RequestMethod.GET)
+	public String showForm2(){
+		return "reservation";
 	}
 	
 
@@ -120,6 +126,32 @@ public class ClientControl {
 
 		return dao.listerVisiteurs();
 	}
+	
+	
+	
+	
+	
+	@RequestMapping(value="/reservation",method=RequestMethod.POST)
+	public @ResponseBody Resultat reservation(
+			@RequestBody @Valid Reservation reservation, BindingResult bres) {
+		System.out.println("reservation nom = "+reservation.getReservation_nom());
+		Resultat ress = convertBindingResult(bres);
+	
+		Reservation r = new Reservation();
+		
+		r.setReservation_nom(reservation.getReservation_nom());		
+		if(ress.getRes().equals("SUCCESS")) {
+			dao.reservation(r);
+		}	
+		return ress;
+	}
+	
+	
+
+
+	
+	
+	
 
 	public Resultat convertBindingResult(BindingResult bres) {
 		Resultat res = new Resultat();

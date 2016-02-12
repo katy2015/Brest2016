@@ -1,24 +1,39 @@
 package bean;
-
-
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-//@Entity
-//@Table(name="RESERVATION")
+@Entity
+@Table(name="RESERVATION")
 public class Reservation {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="reservation_id")
+	private Integer reservation_id;
+	
+	@Column(name="reservation_nom")
+	private String reservation_nom;
+
+	public Integer getReservation_id() {
+		return reservation_id;
+	}
+
+	public void setReservation_id(Integer reservation_id) {
+		this.reservation_id = reservation_id;
+	}
+
+	public String getReservation_nom() {
+		return reservation_nom;
+	}
+
+	public void setReservation_nom(String reservation_nom) {
+		this.reservation_nom = reservation_nom;
+	}
+	
 	/*@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="reservation_id")

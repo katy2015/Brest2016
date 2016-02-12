@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import bean.Billet;
 import bean.Client;
+import bean.Reservation;
 import bean.Visiteur;
 
 @Service
@@ -46,6 +47,15 @@ public class Dao {
 		tx.commit();
 	}
 	
+	
+	public void reservation(Reservation r)
+	{
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(r);
+		em.merge(r);
+		tx.commit();
+	}
 	
 	public List<Client>listerClients()  {
 		List <Client> lst = em.createQuery(

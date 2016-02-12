@@ -70,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="simpleCart_total"></span> </div>
 							<img src="images/cart.png" alt=""/></h3>
 						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+						<p><a href="javascript:;" class="simpleCart_empty">Panier vide</a></p>
 
 					</div>
 				</div>
@@ -82,12 +82,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="head-top">
 				<div class="logo">
-					<h1><a href="index.jsp">Mattress</a></h1>
+					<h1><a href="index.jsp">Brest-2016</a></h1>
 				</div>
 		  <div class=" h_menu4">
 				<ul class="memenu skyblue">
-					  <li><a class="color8" href="index.jsp">BED LINEN</a></li>	
-				      <li><a class="color1" href="#">CUSHIONS</a>
+					  <li><a class="color8" href="index.jsp">Animation</a></li>	
+				      <li><a class="color1" href="#">Reservation</a>
 				      	<div class="mepanel">
 						<div class="row">
 							<div class="col1">
@@ -143,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  </div>
 						</div>
 					</li>
-				    <li class="grid"><a class="color2" href="#">BEDSPREADS</a>
+				    <li class="grid"><a class="color2" href="#">Inscription</a>
 					  	<div class="mepanel">
 						<div class="row">
 							<div class="col1">
@@ -239,15 +239,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<div class="address-more">
 						<h4>Address</h4>
-							<p>The company name,</p>
-							<p>Lorem ipsum dolor,</p>
-							<p>Glasglow Dr 40 Fe 72. </p>
+							<p>UBO,</p>
+							<p>Brest2016,</p>
+							<p>Abdou et Kawtar. </p>
 						</div>
 						<div class="address-more">
 						<h4>Address1</h4>
-							<p>Tel:1115550001</p>
+							<p>Tel:0675723248</p>
 							<p>Fax:190-4509-494</p>
-							<p>Email:<a href="mailto:contact@example.com"> contact@example.com</a></p>
+							<p>Email:abdou@gmail.com et kawtar@gmail.com<a href="mailto:contact@example.com"> contact@example.com</a></p>
 						</div>
 					
 				</div>
