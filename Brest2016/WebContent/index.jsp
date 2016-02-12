@@ -338,7 +338,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</h3>
 										</div>
 						</a>
-					<p><a href="single.jsp">ESSENTIAL</a></p>
+					<p><a href="single.jsp">Essentiel</a></p>
 					<a href="#" class="item_add"><p class="number item_price"><i> </i>500.00 €</p></a>
 					</div>
 					<div class="col-md-3 grid-top simpleCart_shelfItem">
