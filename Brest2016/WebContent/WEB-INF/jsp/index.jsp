@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="head-top">
 				<div class="logo">
-					<h1><a href="index.jsp">Mattress</a></h1>
+					<h1><a href="index.jsp">Brest-2016</a></h1>
 				</div>
 		  <div class=" h_menu4">
 				<ul class="memenu skyblue">
