@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <title>ajout d'un visiteurt</title>
-<jsp:include page="../../menu.jsp" />
+<jsp:include page="../../menuFirst.jsp" />
 <div style="clear:both"></div>
 <script type="text/javascript" src="angular/angular1.4.8.min.js"></script>
 <script type="text/javascript">

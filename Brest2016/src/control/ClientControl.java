@@ -45,6 +45,14 @@ public class ClientControl {
 	public String showForm2(){
 		return "reservation";
 	}
+	@RequestMapping(value="/login",method=RequestMethod.GET)
+	public String showForm3(){
+		return "login";
+	}
+	@RequestMapping(value="/index",method=RequestMethod.GET)
+	public String showForm4(){
+		return "index";
+	}
 	
 
 //	@RequestMapping(value="/validerClient",method=RequestMethod.POST
