@@ -397,11 +397,11 @@ height: 35px;
 /*--content-top--*/
 .cont {
     position: relative;
-    min-height: 66em;
+    min-height: 80em;
 }
 .content {
     position: absolute;
-    top: 10%;
+    top: -66 em;
     background-color: #fff;
     padding: 2em;
 }
