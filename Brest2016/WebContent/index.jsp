@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!--A Design by W3layouts 
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -264,7 +266,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="cont">
 		<div class="content">
 			<div class="content-top-bottom">
-				<h2>Featured PRODUCTS</h2>
+				<h2>Bateaux</h2>
 				<div class="col-md-6 men">
 					<a href="single.jsp" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/t1.jpg" alt="">
 						<div class="b-wrapper">
@@ -314,7 +316,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"> </div>
 			</div>
 			<div class="content-top">
-				<h1>NEW PRODUCTS</h1>
+				<h1>Animations</h1>
 				<div class="grid-in">
 					<div class="col-md-3 grid-top simpleCart_shelfItem">
 						<a href="single.jsp" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/pi.jpg" alt="">
@@ -423,7 +425,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="footer-class">
-		<p>Â© 2016 Brest-2016 . All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+		<p>Â© 2016 Brest-2016 . All Rights Reserved | Design by  Abdou et Kawtar </p>
 		</div>
 		</div>
 </body>
