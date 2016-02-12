@@ -180,9 +180,7 @@
 						  </div>
 						</div>
 			    </li>
-				<li><a href="<c:url value="login.htm">  
-        							<c:param name="" value=""/>        							  
-       								</c:url>"> Login</a></li>				
+				<li><a  class="color6" href="login.htm"> Login</a></li>				
 				<li><a class="color6" href="contact.jsp">Contact</a></li>
 			  </ul> 
 			</div>

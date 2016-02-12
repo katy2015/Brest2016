@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
-<html>
+<html ng-app="monApp">
 <head>
 <title>Mattress A Ecommerce Category Flat Bootstrap Responsive Website Template | Register :: w3layouts</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -28,187 +28,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/memenu.js"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>
 <script src="js/simpleCart.min.js"> </script>
+
+<script type="text/javascript" src="angular/angular1.4.8.min.js"></script>
+<script type="text/javascript">
+
+var monApp = angular.module("monApp", []).
+controller('ClientControl', ['$scope', '$http', function ($scope, $http) {
+	$scope.visiteur = {};
+	$scope.inscription = function () {
+		//alert("creerClient");
+	      $http({
+	          method: 'POST',
+	          url: 'register.htm',
+	          headers: {'Content-Type': 'application/json'},
+	          data:  $scope.visiteur
+	        }).success(function (data) 
+	          {
+	        	//alert("nb visiteurs "+data.length);
+	        	$scope.erreurs = data;
+	        	if (data.res == "SUCCESS") {
+	     			//alert("success");
+	     			$scope.mess = "Visiteur " + $scope.visiteur.visit_nom + " enregistré";
+	     			$scope.visiteur.visit_nom = "";
+	     			$scope.visiteur.visit_prenom = "";
+	     			$scope.visiteur.visit_email = "";
+	     			$scope.visiteur.visit_date_naissance = "";
+	     			$scope.visiteur.visit_password = "";
+	     			$http({
+		    	          method: 'GET',
+		    	          url: 'listerVisiteurs.htm',
+		    	          headers: {'Content-Type': 'application/json'},
+		    	     	}).success(function (data) 
+		    	        {
+		    	        	//alert("nb clients "+data.length);
+		    	        	$scope.listeVisteurs = data;
+		    	      	});
+	        	}
+	          });
+	};
+
+}]);
+
+
+
+</script>
 </head>
 <body>
 <!--header-->
-<div class="header">
-	<div class="header-top">
-		<div class="container">
-			<div class="social">
-				<ul>
-					<li><a href="#"><i class="facebok"> </i></a></li>
-					<li><a href="#"><i class="twiter"> </i></a></li>
-					<li><a href="#"><i class="inst"> </i></a></li>
-					<li><a href="#"><i class="goog"> </i></a></li>
-						<div class="clearfix"></div>	
-				</ul>
-			</div>
-			<div class="header-left">
-			
-				<div class="search-box">
-					<div id="sb-search" class="sb-search">
-						<form>
-							<input class="sb-search-input" placeholder="Enter your search term..." type="search"  id="search">
-							<input class="sb-search-submit" type="submit" value="">
-							<span class="sb-icon-search"> </span>
-						</form>
-					</div>
-				</div>
-			
-<!-- search-scripts -->
-					<script src="js/classie.js"></script>
-					<script src="js/uisearch.js"></script>
-						<script>
-							new UISearch( document.getElementById( 'sb-search' ) );
-						</script>
-					<!-- //search-scripts -->
-
-				<div class="ca-r">
-					<div class="cart box_1">
-						<a href="checkout.jsp">
-						<h3> <div class="total">
-							<span class="simpleCart_total"></span> </div>
-							<img src="images/cart.png" alt=""/></h3>
-						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-
-					</div>
-				</div>
-					<div class="clearfix"> </div>
-			</div>
-				
-		</div>
-		</div>
-		<div class="container">
-			<div class="head-top">
-				<div class="logo">
-					<h1><a href="index.jsp">Brest-2016</a></h1>
-				</div>
-		  <div class=" h_menu4">
-				<ul class="memenu skyblue">
-					  <li><a class="color8" href="index.jsp">BED LINEN</a></li>	
-				      <li><a class="color1" href="#">CUSHIONS</a>
-				      	<div class="mepanel">
-						<div class="row">
-							<div class="col1">
-								<div class="h_nav">
-									<ul>
-										<li><a href="products.jsp">Bedskirt</a></li>
-										<li><a href="products.jsp">Blanket/Throw</a></li>
-										<li><a href="products.jsp">Collection/Duvet</a></li>
-										<li><a href="products.jsp">Comforter</a></li>
-										<li><a href="products.jsp">Comforter Set</a></li>
-										<li><a href="products.jsp">Decorative Pillow</a></li>
-										<li><a href="products.jsp">Mattress Pad </a></li>
-										<li><a href="products.jsp">Mattress Topper</a></li>
-										<li><a href="products.jsp">Pillow</a></li>
-										<li><a href="products.jsp">Pillow Protector</a></li>
-										
-									</ul>	
-								</div>							
-							</div>
-							<div class="col1">
-								<div class="h_nav">
-									<ul>
-										<li><a href="products.jsp">Alpaca</a></li>
-										<li><a href="products.jsp">Cashmere</a></li>
-										<li><a href="products.jsp">Cotton</a></li>
-										<li><a href="products.jsp">Cotton Blend</a></li>
-										<li><a href="products.jsp">Down</a></li>
-										<li><a href="products.jsp">Down Alternative</a></li>
-										<li><a href="products.jsp">Egyptian Cotton</a></li>
-										<li><a href="products.jsp">Modal</a></li>
-										<li><a href="products.jsp">Pima Cotton</a></li>
-										<li><a href="products.jsp">Silk </a></li>
-										
-									</ul>	
-								</div>							
-							</div>
-							<div class="col1">
-								<div class="h_nav">
-									<ul>
-										<li><a href="products.jsp">Bedskirt</a></li>
-										<li><a href="products.jsp">Blanket/Throw</a></li>
-										<li><a href="products.jsp">Collection/Duvet</a></li>
-										<li><a href="products.jsp">Comforter</a></li>
-										<li><a href="products.jsp">Comforter Set</a></li>
-										<li><a href="products.jsp">Decorative Pillow</a></li>
-										<li><a href="products.jsp">Mattress Pad </a></li>
-										<li><a href="products.jsp">Mattress Topper</a></li>
-										<li><a href="products.jsp">Pillow</a></li>
-										<li><a href="products.jsp">Pillow Protector</a></li>
-									</ul>	
-								</div>												
-							</div>
-						  </div>
-						</div>
-					</li>
-				    <li class="grid"><a class="color2" href="#">BEDSPREADS</a>
-					  	<div class="mepanel">
-						<div class="row">
-							<div class="col1">
-								<div class="h_nav">
-									<ul>
-										<li><a href="products.jsp">Bedskirt</a></li>
-										<li><a href="products.jsp">Blanket/Throw</a></li>
-										<li><a href="products.jsp">Collection/Duvet</a></li>
-										<li><a href="products.jsp">Comforter</a></li>
-										<li><a href="products.jsp">Comforter Set</a></li>
-										<li><a href="products.jsp">Decorative Pillow</a></li>
-										<li><a href="products.jsp">Mattress Pad </a></li>
-										<li><a href="products.jsp">Mattress Topper</a></li>
-										<li><a href="products.jsp">Pillow</a></li>
-										<li><a href="products.jsp">Pillow Protector</a></li>
-										
-									</ul>	
-								</div>								
-							</div>
-							<div class="col1">
-								<div class="h_nav">
-									<ul>
-										<li><a href="products.jsp">Alpaca</a></li>
-										<li><a href="products.jsp">Cashmere</a></li>
-										<li><a href="products.jsp">Cotton</a></li>
-										<li><a href="products.jsp">Cotton Blend</a></li>
-										<li><a href="products.jsp">Down</a></li>
-										<li><a href="products.jsp">Down Alternative</a></li>
-										<li><a href="products.jsp">Egyptian Cotton</a></li>
-										<li><a href="products.jsp">Modal</a></li>
-										<li><a href="products.jsp">Pima Cotton</a></li>
-										<li><a href="products.jsp">Silk </a></li>
-										
-									</ul>		
-								</div>							
-							</div>
-							<div class="col1">
-								<div class="h_nav">
-									
-									<ul>
-										<li><a href="products.jsp">Bedskirt</a></li>
-										<li><a href="products.jsp">Blanket/Throw</a></li>
-										<li><a href="products.jsp">Collection/Duvet</a></li>
-										<li><a href="products.jsp">Comforter</a></li>
-										<li><a href="products.jsp">Comforter Set</a></li>
-										<li><a href="products.jsp">Decorative Pillow</a></li>
-										<li><a href="products.jsp">Mattress Pad </a></li>
-										<li><a href="products.jsp">Mattress Topper</a></li>
-										<li><a href="products.jsp">Pillow</a></li>
-										<li><a href="products.jsp">Pillow Protector</a></li>
-									</ul>	
-								</div>												
-							</div>
-						  </div>
-						</div>
-			    </li>		
-				<li><a class="color4" href="login.jsp">Login</a></li>				
-				<li><a class="color6" href="contact.jsp">Contact</a></li>	
-			  </ul> 
-			</div>
-				
-				<div class="clearfix"> </div>
-		</div>
-		</div>
-	</div>
+<jsp:include page="menu.jsp" />
 	<!-- grow -->
 	<div class="grow">
 		<div class="container">
@@ -220,36 +87,79 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class=" container">
 <div class=" register">
 	
-		  	  <form> 
+		  	  <form name="form" ng-controller="ClientControl" ng-submit="inscription()"> 
 				 <div class="col-md-6 register-top-grid">
-					<h3>Personal infomation</h3>
+					<h3>Information personnelle</h3>
 					 <div>
-						<span>First Name</span>
-						<input type="text"> 
-					 </div>
+						<span>Nom</span>
+						<input id="visit_nom" name="visit_nom" type="text" value="adfdfaa" 
+							   ng-model="visiteur.visit_nom" 
+							   ng-model-options="{ updateOn: 'blur' }"
+			 		           ng-required="true" 
+			 		           ng-pattern="/^[a-zA-Z]{2,}$/" /> 
+			 		   <div ng-show="form.visit_nom.$dirty">
+		 		   	   <div ng-show="form.visit_nom.$error.required">Veuillez saisir un nom</div>
+			    	   </div>
+     			       <div ng-show="form.visit_nom.$error.pattern">Veuillez saisir au moins deux caractères</div>
+					  </div>
+					   
 					 <div>
-						<span>Last Name</span>
-						<input type="text"> 
+						<span>Prenom</span>
+						<input id="visit_prenom" name="visit_prenom" value="zzssdz" 
+							ng-model="visiteur.visit_prenom" 
+							ng-model-options="{ updateOn: 'blur' }"
+							required type="text" /> 
+							
+							<div ng-show="form.visit_prenom.$dirty">
+      						<div ng-show="form.visit_prenom.$error.required">Veuillez saisir un prénom</div>
+      						</div>
 					 </div>
+					 
+					 
 					 <div>
-						 <span>Email Address</span>
-						 <input type="text"> 
+						<span>Date de naissance</span>
+						<input id="visit_date_naissance" name="visit_date_naissance" value="20050201" 
+							ng-model="visiteur.visit_date_naissance" 
+							ng-model-options="{ updateOn: 'blur' }"
+							required type="text" /> 
+							
+							<div ng-show="form.visit_date_naissance.$dirty">
+      						<div ng-show="form.visit_date_naissance.$error.required">Veuillez votre date de naissance</div>
+      						</div>
 					 </div>
+					 
+					 
+					 <div>
+						 <span> Adresse mail</span>
+						 <input id="visit_email" name="visit_email" value="zzz@gmail.com" 
+							ng-model="visiteur.visit_email" 
+							ng-model-options="{ updateOn: 'blur' }"
+							required type="text" /> 
+							
+							<div ng-show="form.visit_email.$dirty">
+      						<div ng-show="form.visit_email.$error.required">Veuillez saisir votre email</div>
+      						</div>
+					 </div>
+					 
+					 
 					   <a class="news-letter" href="#">
 						 <label class="checkbox"><input type="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
 					   </a>
 					 </div>
 				     <div class="col-md-6 register-bottom-grid">
-						    <h3>Login information</h3>
+						    <h3>Information d'authentification</h3>
 							 <div>
 								<span>Password</span>
-								<input type="password">
+								<input  id="visit_password" name="visit_password" value="20050201" 
+									ng-model="visiteur.visit_password" 
+									ng-model-options="{ updateOn: 'blur' }"
+									required type="password" />
 							 </div>
 							 <div>
 								<span>Confirm Password</span>
 								<input type="password">
 							 </div>
-							 <input type="submit" value="submit">
+							 <button>Ajouter visiteur</button>
 							
 					 </div>
 					 <div class="clearfix"> </div>

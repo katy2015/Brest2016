@@ -54,6 +54,11 @@ public class ClientControl {
 		return "index";
 	}
 	
+	@RequestMapping(value="/register",method=RequestMethod.GET)
+	public String showForm5(){
+		return "register";
+	}
+	
 
 //	@RequestMapping(value="/validerClient",method=RequestMethod.POST
 //			)
@@ -93,6 +98,7 @@ public class ClientControl {
 		v.setVisit_prenom(visiteur.getVisit_prenom());
 		v.setVisit_email(visiteur.getVisit_email());
 		v.setVisit_date_naissance(visiteur.getVisit_date_naissance());
+		v.setVisit_password(visiteur.getVisit_password());
 		//SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
        
 		/*try {
@@ -120,6 +126,46 @@ public class ClientControl {
 		return res;
 	}
 
+	
+	@RequestMapping(value="/register",method=RequestMethod.POST)
+	public @ResponseBody Resultat register(
+			@RequestBody @Valid Visiteur visiteur, BindingResult bres) {
+		System.out.println("register nom = "+visiteur.getVisit_nom());
+		Resultat res = convertBindingResult(bres);
+	
+		Visiteur v = new Visiteur();
+		
+		v.setVisit_nom(visiteur.getVisit_prenom());
+		v.setVisit_prenom(visiteur.getVisit_prenom());
+		v.setVisit_email(visiteur.getVisit_email());
+		v.setVisit_date_naissance(visiteur.getVisit_date_naissance());
+		v.setVisit_password(visiteur.getVisit_password());
+		//SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+       
+		/*try {
+			parsed = (Date) sdf.parse(visiteur.getDateNaissance_Visiteur().toString());
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+        //java.sql.Date sql = new java.sql.Date(parsed.getTime());
+		
+		
+		//Random r = new Random();
+		//int valeur = 5 + r.nextInt(300 - 5);
+       Billet b = new Billet();
+       b.setCode_Billet("Abdou4445");
+       b.setVisiteur(v);
+        //b.setCode_Billet(v.getNom_Visteur().charAt(0)+ v.getPrenom_Visiteur()+valeur);
+	   //v.addBillet(b);
+		if(res.getRes().equals("SUCCESS")) {
+			dao.inscription(v,b);
+		}
+		
+		
+		
+		return res;
+	}
 
 	@RequestMapping(value="/listerClients",method=RequestMethod.GET)
 	public @ResponseBody List <Client> listerClient() {

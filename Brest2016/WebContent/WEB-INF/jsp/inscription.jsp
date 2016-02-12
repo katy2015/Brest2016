@@ -32,6 +32,7 @@ controller('ClientControl', ['$scope', '$http', function ($scope, $http) {
 	     			$scope.visiteur.visit_prenom = "";
 	     			$scope.visiteur.visit_email = "";
 	     			$scope.visiteur.visit_date_naissance = "";
+	     			$scope.visiteur.visit_password = "";
 	     			$http({
 		    	          method: 'GET',
 		    	          url: 'listerVisiteurs.htm',
@@ -129,6 +130,22 @@ $dirty	True if user has already interacted with the form.
 		</tr>
 		
 		<tr>
+		
+		<tr>
+			<td>Mot de passe : </td>
+			<td> <input id="visit_password" name="visit_password" value="20050201" 
+					ng-model="visiteur.visit_password" 
+					ng-model-options="{ updateOn: 'blur' }"
+					required type="password" />
+			</td>
+			<td>
+				<div ng-show="form.visit_password.$dirty">
+      				<div ng-show="form.vvisit_password.$error.required">Veuillez votre mot de passe</div>
+      			</div>
+			</td>
+		</tr>
+		
+		<tr>
 			<td>&nbsp;</td>
 			<td><button>Ajouter visiteur</button></td>
 		</tr>
@@ -144,6 +161,7 @@ Erreurs signalées par le serveur (la validation côté client et côté serveur
 <li ng-show="erreurs.err['visit_prenom']">{{erreurs.err['visit_prenom']}}</li>
 <li ng-show="erreurs.err['visit_email']">{{erreurs.err['visit_email']}}</li>
 <li ng-show="erreurs.err['visit_date_naissance']">{{erreurs.err['visit_date_naissance']}}</li>
+<li ng-show="erreurs.err['visit_password']">{{erreurs.err['visit_password']}}</li>
 
 
 </ul>

@@ -62,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="five">
 			<h2>25% </h2><span>discount</span>
 			</div>
-			<a href="register.jsp" class="create">Create an account</a>
+			<a href="register.htm" class="create">Create an account</a>
 <div class="clearfix"> </div>
 		</div>
 	<div class="clearfix"> </div>

@@ -48,8 +48,15 @@ public class Visiteur {
 	@Column(name="visit_date_naissance")
 	private String visit_date_naissance;
 	
+	@Column(name="visit_password")
+	private String visit_password;
+	
 
 	
+	
+
+
+
 	@OneToMany(mappedBy="visiteur")
 	@Cascade({CascadeType.ALL})
 	public Set<Billet> billets ;//= new HashSet<Billet>();
@@ -161,6 +168,15 @@ public class Visiteur {
 		this.billets.add(billet);
 	}
 
+	public String getVisit_password() {
+		return visit_password;
+	}
+
+
+
+	public void setVisit_password(String visit_password) {
+		this.visit_password = visit_password;
+	}
 
 	
 
