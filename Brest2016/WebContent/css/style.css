@@ -401,7 +401,7 @@ height: 35px;
 }
 .content {
     position: absolute;
-    top: 100px;
+    top: 10%;
     background-color: #fff;
     padding: 2em;
 }
