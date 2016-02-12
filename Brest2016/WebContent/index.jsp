@@ -70,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="simpleCart_total"></span> </div>
 							<img src="images/cart.png" alt=""/></h3>
 						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+						<p><a href="javascript:;" class="simpleCart_empty">Panier vide</a></p>
 
 					</div>
 				</div>
@@ -82,12 +82,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="head-top">
 				<div class="logo">
-					<h1><a href="index.jsp">Mattress</a></h1>
+					<h1><a href="index.jsp">Brest-2016</a></h1>
 				</div>
 		  <div class=" h_menu4">
 				<ul class="memenu skyblue">
-					  <li><a class="color8" href="index.jsp">BED LINEN</a></li>	
-				      <li><a class="color1" href="#">CUSHIONS</a>
+					  <li><a class="color8" href="index.jsp">Animation</a></li>	
+				      <li><a class="color1" href="#">Reservation</a>
 				      	<div class="mepanel">
 						<div class="row">
 							<div class="col1">
@@ -143,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  </div>
 						</div>
 					</li>
-				    <li class="grid"><a class="color2" href="#">BEDSPREADS</a>
+				    <li class="grid"><a class="color2" href="#">Inscription</a>
 					  	<div class="mepanel">
 						<div class="row">
 							<div class="col1">
@@ -228,8 +228,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    <li>
 					
 						<div class="banner-text">
-							<h3>Lorem Ipsum is   </h3>
-						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+							<h3>Brest  </h3>
+						<p>Fêtes Maritime</p>
 						
 						</div>
 				
@@ -237,8 +237,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li>
 					
 						<div class="banner-text">
-							<h3>There are many  </h3>
-						<p>Popular belief Contrary to , Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+							<h3>Réservez vite </h3>
+						<p>Des animations limitées</p>
 												
 
 						</div>
@@ -246,8 +246,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</li>
 				<li>
 						<div class="banner-text">
-							<h3>Sed ut perspiciatis</h3>
-						<p>Lorem Ipsum is not simply random text. Contrary to popular belief, It has roots in a piece of classical Latin literature from 45 BC.</p>
+							<h3>Brest-2016</h3>
+						<p>Votre avis nous interesse</p>
 								
 
 						</div>
@@ -328,7 +328,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 
 					<p><a href="single.jsp">TRIBECA LIVING</a></p>
-					<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>
+					<a href="#" class="item_add"><p class="number item_price"><i> </i> 500.00 €</p></a>
 					</div>
 					<div class="col-md-3 grid-top simpleCart_shelfItem">
 						<a href="single.jsp" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/pi1.jpg" alt="">
@@ -339,7 +339,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 						</a>
 					<p><a href="single.jsp">ESSENTIAL</a></p>
-					<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>
+					<a href="#" class="item_add"><p class="number item_price"><i> </i>500.00 €</p></a>
 					</div>
 					<div class="col-md-3 grid-top simpleCart_shelfItem">
 						<a href="single.jsp" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/pi2.jpg" alt="">
@@ -350,7 +350,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 						</a>
 					<p><a href="single.jsp">CLARISSA</a></p>
-					<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>
+					<a href="#" class="item_add"><p class="number item_price"><i> </i>500.00 €</p></a>
 					</div>
 					<div class="col-md-3 grid-top">
 						<a href="single.jsp" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="images/pi4.jpg" alt="">
@@ -361,7 +361,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 						</a>
 					<p><a href="single.jsp">LITTLE HOME</a></p>
-					<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>
+					<a href="#" class="item_add"><p class="number item_price"><i> </i>500.00 €</p></a>
 					</div>
 							<div class="clearfix"> </div>
 				</div>
@@ -423,7 +423,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="footer-class">
-		<p>© 2015 Mattress . All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+		<p>Â© 2016 Brest-2016 . All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 		</div>
 		</div>
 </body>
